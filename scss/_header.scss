@@ -1,0 +1,86 @@
+.header {
+	grid-column: full-start/full-end;
+	grid-row: header-start/header-end;
+
+	display: grid;
+	grid-template-columns: var(--gap) [center-start] 1fr [center-end] var(--gap);
+
+	background-color: #000;
+
+	&__container {
+		grid-column: center-start/center-end;
+
+		display: grid;
+		grid-template-columns: min-content 1fr;
+		align-items: center;
+		gap: 2rem 5rem;
+
+		padding: 2rem 0;
+	}
+
+	&__logo {
+		font-family: Gilroy Bold;
+		color: #fff;
+		font-size: 3rem;
+		letter-spacing: 2px;
+
+		span {
+			background: linear-gradient(to right, $default-dark, $default-light);
+			background-clip: text;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+	}
+
+	&__menu-desktop {
+		ul {
+			display: grid;
+			grid-auto-flow: column;
+			justify-content: flex-end;
+			align-items: center;
+			gap: 3rem;
+
+			li {
+				a {
+					font-size: 1.6rem;
+					font-weight: 500;
+					color: #fff;
+					transition: all 0.2s;
+
+					&:hover {
+						color: $default-dark;
+					}
+				}
+
+				&:last-child {
+					padding: 3px;
+					background: linear-gradient(to right, $default-dark, $default-light);
+					transition: all 0.3s;
+
+					a {
+						display: inline-block;
+						background-color: #000;
+						padding: 0.5rem 1.2rem;
+
+						i {
+							display: inline-block;
+							margin-right: 1rem;
+							color: $default-dark;
+						}
+					}
+
+					&:hover a {
+						color: #000;
+						background: linear-gradient(to right,
+								$default-dark,
+								$default-light);
+					}
+
+					&:hover a i {
+						color: #000000 !important;
+					}
+				}
+			}
+		}
+	}
+}
