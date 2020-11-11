@@ -1,5 +1,5 @@
 :root {
-  --gap: 10rem;
+  --gap: 5rem;
 }
 
 *,
@@ -24,6 +24,14 @@ a {
   text-decoration: none;
 }
 
+ul {
+  list-style: none;
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}
+
 @font-face {
   src: url(../fonts/Gilroy-ExtraBold.otf);
   font-family: Gilroy Bold;
@@ -32,6 +40,12 @@ a {
 @font-face {
   src: url(../fonts/Gilroy-Light.otf);
   font-family: Gilroy Light;
+}
+
+.para {
+  font-size: 1.4rem;
+  line-height: 25px;
+  color: #222222;
 }
 
 .container {
@@ -46,15 +60,16 @@ a {
   display: grid;
   grid-template-columns: var(--gap) [center-start] 1fr [center-end] var(--gap);
   background-color: #000;
+  /* mega drop down */
 }
 
 .header__container {
+  position: relative;
   grid-column: center-start/center-end;
   display: grid;
   grid-template-columns: min-content 1fr;
-  align-items: center;
-  gap: 2rem 5rem;
-  padding: 2rem 0;
+  gap: 2rem 6rem;
+  height: 5rem;
 }
 
 .header__logo {
@@ -62,6 +77,7 @@ a {
   color: #fff;
   font-size: 3rem;
   letter-spacing: 2px;
+  align-self: center;
 }
 
 .header__logo span {
@@ -76,7 +92,23 @@ a {
   grid-auto-flow: column;
   justify-content: flex-end;
   align-items: center;
-  gap: 3rem;
+}
+
+.header__menu-desktop ul li {
+  padding: 0 2rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.header__menu-desktop ul li:not(:last-child) {
+  border-left: 1px dotted #555555;
+}
+
+.header__menu-desktop ul li:hover {
+  background: linear-gradient(to right, #e30b0e, #fc5130);
+}
+
+.header__menu-desktop ul li:hover a {
+  color: #000000;
 }
 
 .header__menu-desktop ul li a {
@@ -84,10 +116,9 @@ a {
   font-weight: 500;
   color: #fff;
   transition: all 0.2s;
-}
-
-.header__menu-desktop ul li a:hover {
-  color: #e30b0e;
+  line-height: 5rem;
+  display: block;
+  text-align: center;
 }
 
 .header__menu-desktop ul li:last-child {
@@ -100,6 +131,7 @@ a {
   display: inline-block;
   background-color: #000;
   padding: 0.5rem 1.2rem;
+  line-height: 25px;
 }
 
 .header__menu-desktop ul li:last-child a i {
@@ -115,6 +147,84 @@ a {
 
 .header__menu-desktop ul li:last-child:hover a i {
   color: #000000 !important;
+}
+
+.header .mega-drop-down a {
+  display: flex;
+  align-items: center;
+}
+
+.header .mega-drop-down a:hover + .mega-menu {
+  display: grid;
+}
+
+.header .mega-drop-down .fa-chevron-down {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.header .mega-drop-down .mega-menu {
+  position: absolute;
+  padding: 1rem;
+  width: 100%;
+  left: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 30% repeat(3, 1fr);
+  gap: 0 0;
+}
+
+.header .mega-drop-down .mega-menu:hover {
+  display: grid;
+}
+
+.header .mega-drop-down .mega-menu__container {
+  background-color: #000;
+}
+
+.header .mega-drop-down .mega-menu__container h4 {
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  color: #fff;
+  background-color: #e30b0e;
+}
+
+.header .mega-drop-down .mega-menu__container h4:not(:nth-of-type(4)) {
+  border-right: 1px solid #fc5130;
+}
+
+.header .mega-drop-down .mega-menu__container img {
+  display: block;
+  width: 100%;
+}
+
+.header .mega-drop-down .mega-menu__container div {
+  padding: 2rem;
+}
+
+.header .mega-drop-down .mega-menu__container p {
+  color: #fff;
+}
+
+.header .mega-drop-down .mega-menu__container span {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.header .mega-drop-down .mega-menu__container span i {
+  font-size: 2rem;
+  color: #fff;
+  display: inline-block;
+  margin-right: 2rem;
+  transition: color 0.1s linear;
+  cursor: pointer;
+}
+
+.header .mega-drop-down .mega-menu__container span i:hover {
+  color: #e30b0e;
 }
 
 .hero {

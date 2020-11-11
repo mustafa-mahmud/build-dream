@@ -1,9 +1,15 @@
 @font-face {
-  src: url(../fonts/Gilroy-ExtraBold.otf);
-  font-family: Gilroy Bold;
+	src: url(../fonts/Gilroy-ExtraBold.otf);
+	font-family: Gilroy Bold;
 }
 
 @font-face {
-  src: url(../fonts/Gilroy-Light.otf);
-  font-family: Gilroy Light;
+	src: url(../fonts/Gilroy-Light.otf);
+	font-family: Gilroy Light;
+}
+
+.para {
+	font-size: 1.4rem;
+	line-height: 25px;
+	color: #222222;
 }
