@@ -112,6 +112,9 @@
 
 			&:hover+.mega-menu {
 				display: grid;
+				transform: translateY(0rem) !important;
+				opacity: 1 !important;
+				visibility: visible !important;
 			}
 		}
 
@@ -127,18 +130,41 @@
 			left: 0;
 			padding: 0;
 
+			transform: translateY(3rem);
+			opacity: 0;
+			visibility: hidden;
+			transition: all 0.3s linear !important;
+
 			display: grid;
 			grid-template-columns: 30% repeat(3, 1fr);
 			gap: 0 0;
 
-			//display: none;
+			display: none;
 
 			&:hover {
+				transition: all 0.3s linear !important;
+
 				display: grid;
+				transform: translateY(0rem) !important;
+				opacity: 1 !important;
+				visibility: visible !important;
+			}
+
+			img {
+				overflow: hidden !important;
+				transition: transform 0.3s linear !important;
+			}
+
+			img:hover {
+				transform: scale(1.1);
 			}
 
 			&__container {
 				background-color: #000;
+
+				&:not(:last-child) {
+					border-right: 1px dotted #222222;
+				}
 
 				h4 {
 					padding: 1rem;
@@ -181,6 +207,154 @@
 
 						&:hover {
 							color: $default-dark;
+						}
+					}
+				}
+
+				&:nth-of-type(2) {
+					h5 {
+						color: #fff;
+						font-size: 2rem;
+						text-align: center;
+						letter-spacing: 2px;
+						border-bottom: 1px solid #fff;
+						padding-bottom: 1rem;
+						margin-bottom: 2rem;
+					}
+
+					.img-gallery {
+						display: grid;
+						grid-template-columns: repeat(2, 1fr);
+						gap: 2rem;
+
+						img {
+							border: 2px dotted $default-dark;
+						}
+					}
+				}
+
+				&:nth-of-type(3) {
+					.clients {
+						position: relative;
+						margin: 1rem 0;
+
+						img {
+							width: 60%;
+							display: block;
+							margin-right: 2rem;
+						}
+
+						div {
+							transform: rotate(-90deg);
+							transform-origin: top;
+							position: absolute;
+							right: 1rem;
+							bottom: 3rem;
+							padding: 0;
+
+							strong {
+								background: linear-gradient(to right, $default-dark, $default-light);
+								-webkit-background-clip: text;
+								-webkit-text-fill-color: transparent;
+								font-size: 1.7rem;
+								letter-spacing: 2px;
+								text-transform: uppercase;
+								position: relative;
+
+								&::after {
+									content: '';
+									position: absolute;
+									display: inline-block;
+									width: 100%;
+									height: 2px;
+									top: 50%;
+									left: 110%;
+									transform: translateY(-50%);
+									background-color: #222222;
+								}
+							}
+
+							p {
+								padding: 0;
+								margin: 0;
+								position: relative;
+
+								&::after {
+									content: '\f10e ';
+									font-family: FontAwesome;
+									position: absolute;
+									font-size: 5rem;
+									background: linear-gradient(to right, $default-dark, $default-light);
+									-webkit-background-clip: text;
+									-webkit-text-fill-color: transparent;
+									display: inline-block;
+									width: 50px;
+									height: 50px;
+									top: -2rem;
+								}
+							}
+						}
+					}
+				}
+
+				&:nth-of-type(4) {
+					.products {
+						padding: 0;
+
+						div {
+							margin: 0 3rem;
+							border-bottom: 1px solid $default-dark;
+
+							p {
+								display: flex;
+								justify-content: space-between;
+								align-items: center;
+
+								margin-top: 2rem;
+
+								i {
+									&:first-child {
+										color: #fff;
+										font-size: 2rem;
+									}
+
+									&:last-child {
+										color: $default-dark;
+										font-size: 3rem;
+									}
+								}
+							}
+						}
+
+						.mega-input {
+							padding: 0;
+							border: 0;
+							margin-top: 2rem;
+
+							input {
+								margin-top: 1rem;
+								display: inline-block;
+								border-radius: 3px;
+								border: 1px solid #222222;
+								height: 3rem;
+								padding: 1rem;
+								width: 100%;
+							}
+
+							button {
+								display: inline-block;
+								padding: 1rem 3rem;
+								font-size: 1.4rem;
+								font-weight: bold;
+								letter-spacing: 2px;
+								color: #000000;
+								background-image: linear-gradient(to right, $default-dark, $default-light);
+								text-align: center;
+								border: 0;
+								margin-top: 2rem;
+								border-radius: 5px;
+								cursor: pointer;
+							}
 						}
 					}
 				}
