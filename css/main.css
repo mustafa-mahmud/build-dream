@@ -87,31 +87,31 @@ ul {
   -webkit-text-fill-color: transparent;
 }
 
-.header__menu-desktop ul {
+.header__menu-desktop > ul {
   display: grid;
   grid-auto-flow: column;
   justify-content: flex-end;
   align-items: center;
 }
 
-.header__menu-desktop ul li {
+.header__menu-desktop > ul > li {
   padding: 0 2rem;
   transition: all 0.3s ease-in-out;
 }
 
-.header__menu-desktop ul li:not(:last-child) {
+.header__menu-desktop > ul > li:not(:last-child) {
   border-left: 1px dotted #555555;
 }
 
-.header__menu-desktop ul li:hover {
+.header__menu-desktop > ul > li:hover {
   background: linear-gradient(to right, #e30b0e, #fc5130);
 }
 
-.header__menu-desktop ul li:hover a {
+.header__menu-desktop > ul > li:hover a {
   color: #000000;
 }
 
-.header__menu-desktop ul li a {
+.header__menu-desktop > ul > li > a {
   font-size: 1.6rem;
   font-weight: 500;
   color: #fff;
@@ -121,32 +121,37 @@ ul {
   text-align: center;
 }
 
-.header__menu-desktop ul li:last-child {
+.header__menu-desktop > ul > li:last-child {
   padding: 3px;
   background: linear-gradient(to right, #e30b0e, #fc5130);
   transition: all 0.3s;
 }
 
-.header__menu-desktop ul li:last-child a {
+.header__menu-desktop > ul > li:last-child a {
   display: inline-block;
   background-color: #000;
   padding: 0.5rem 1.2rem;
   line-height: 25px;
 }
 
-.header__menu-desktop ul li:last-child a i {
+.header__menu-desktop > ul > li:last-child a i {
   display: inline-block;
   margin-right: 1rem;
   color: #e30b0e;
 }
 
-.header__menu-desktop ul li:last-child:hover a {
+.header__menu-desktop > ul > li:last-child:hover a {
   color: #000;
   background: linear-gradient(to right, #e30b0e, #fc5130);
 }
 
-.header__menu-desktop ul li:last-child:hover a i {
+.header__menu-desktop > ul > li:last-child:hover a i {
   color: #000000 !important;
+}
+
+.header__menu-desktop > ul .funfacts i {
+  font-weight: bold;
+  font-size: 1rem;
 }
 
 .header .mega-drop-down a {
@@ -155,7 +160,6 @@ ul {
 }
 
 .header .mega-drop-down a:hover + .mega-menu {
-  display: grid;
   transform: translateY(0rem) !important;
   opacity: 1 !important;
   visibility: visible !important;
@@ -179,11 +183,9 @@ ul {
   display: grid;
   grid-template-columns: 30% repeat(3, 1fr);
   gap: 0 0;
-  display: none;
 }
 
 .header .mega-drop-down .mega-menu:hover {
-  transition: all 0.3s linear !important;
   display: grid;
   transform: translateY(0rem) !important;
   opacity: 1 !important;
@@ -250,6 +252,33 @@ ul {
 
 .header .mega-drop-down .mega-menu__container span i:hover {
   color: #e30b0e;
+}
+
+.header .mega-drop-down .mega-menu__container:nth-of-type(1) ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header .mega-drop-down .mega-menu__container:nth-of-type(1) ul li {
+  text-transform: capitalize;
+  background-color: #e30b0e;
+  padding: 0px;
+  border-radius: 2rem;
+  margin: 5px;
+  padding: 5px 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.header .mega-drop-down .mega-menu__container:nth-of-type(1) ul li a {
+  color: #fff !important;
+  font-size: 1.4rem;
+}
+
+.header .mega-drop-down .mega-menu__container:nth-of-type(1) ul li i {
+  margin-right: 1rem;
+  font-size: 1.3rem;
+  color: #fff;
 }
 
 .header .mega-drop-down .mega-menu__container:nth-of-type(2) h5 {

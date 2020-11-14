@@ -37,13 +37,13 @@
 
 	&__menu-desktop {
 
-		ul {
+		&>ul {
 			display: grid;
 			grid-auto-flow: column;
 			justify-content: flex-end;
 			align-items: center;
 
-			li {
+			&>li {
 				padding: 0 2rem;
 				transition: all 0.3s ease-in-out;
 
@@ -61,7 +61,7 @@
 					color: #000000;
 				}
 
-				a {
+				&>a {
 					font-size: 1.6rem;
 					font-weight: 500;
 					color: #fff;
@@ -101,17 +101,24 @@
 					}
 				}
 			}
+
+			.funfacts {
+				i {
+					font-weight: bold;
+					font-size: 1rem;
+				}
+			}
 		}
 	}
 
 	/* mega drop down */
 	.mega-drop-down {
+
 		a {
 			display: flex;
 			align-items: center;
 
 			&:hover+.mega-menu {
-				display: grid;
 				transform: translateY(0rem) !important;
 				opacity: 1 !important;
 				visibility: visible !important;
@@ -139,10 +146,7 @@
 			grid-template-columns: 30% repeat(3, 1fr);
 			gap: 0 0;
 
-			display: none;
-
 			&:hover {
-				transition: all 0.3s linear !important;
 
 				display: grid;
 				transform: translateY(0rem) !important;
@@ -207,6 +211,36 @@
 
 						&:hover {
 							color: $default-dark;
+						}
+					}
+				}
+
+				&:nth-of-type(1) {
+					ul {
+						display: flex;
+						flex-wrap: wrap;
+
+						li {
+							text-transform: capitalize;
+							background-color: $default-dark;
+							padding: 0px;
+							border-radius: 2rem;
+							margin: 5px;
+							padding: 5px 1rem;
+							display: flex;
+							align-items: center;
+
+
+							a {
+								color: #fff !important;
+								font-size: 1.4rem;
+							}
+
+							i {
+								margin-right: 1rem;
+								font-size: 1.3rem;
+								color: #fff;
+							}
 						}
 					}
 				}
