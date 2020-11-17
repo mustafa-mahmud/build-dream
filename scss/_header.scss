@@ -15,7 +15,7 @@
 		grid-template-columns: min-content 1fr;
 		gap: 2rem 6rem;
 
-		height: 5rem;
+		height: 6rem;
 
 	}
 
@@ -66,7 +66,7 @@
 					font-weight: 500;
 					color: #fff;
 					transition: all 0.2s;
-					line-height: 5rem;
+					line-height: 6rem;
 					display: block;
 					text-align: center;
 				}
@@ -136,6 +136,7 @@
 			width: 100%;
 			left: 0;
 			padding: 0;
+			z-index: 9999999;
 
 			transform: translateY(3rem);
 			opacity: 0;
@@ -147,7 +148,6 @@
 			gap: 0 0;
 
 			&:hover {
-
 				display: grid;
 				transform: translateY(0rem) !important;
 				opacity: 1 !important;
@@ -394,6 +394,18 @@
 				}
 
 			}
+		}
+	}
+
+	.funfacts {
+		position: relative;
+
+		i {
+			font-size: 1.5rem !important;
+		}
+
+		&__submenu {
+			position: absolute;
 		}
 	}
 

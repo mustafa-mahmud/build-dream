@@ -1,0 +1,28 @@
+.btn-transparent {
+	text-transform: capitalize;
+	padding: 3px;
+	border: 0;
+	font-size: 1.8rem;
+	position: relative;
+	z-index: 9 !important;
+	background-color: #040402;
+	background-image: linear-gradient(to right, $default-dark, $default-light);
+	position: relative;
+	z-index: -1;
+
+	span {
+		background: #040402;
+		color: #fff;
+		display: inline-block;
+		padding: 1rem 1.5rem;
+		cursor: pointer;
+		transition: all 0.3s linear;
+
+		&:hover {
+			background: linear-gradient(to right, $default-dark, $default-light);
+			color: #000000;
+		}
+	}
+
+
+}
