@@ -44,8 +44,10 @@ ul {
 
 .para {
   font-size: 1.4rem;
+  font-weight: bold;
+  color: #8e8e8e;
+  font-family: 'Poppins', sans-serif;
   line-height: 27px;
-  color: #222222;
 }
 
 .btn-transparent {
@@ -549,7 +551,79 @@ ul {
 .about {
   grid-column: full-start/full-end;
   grid-row: row-start 1 / row-end 1;
-  background-color: olive;
+  background-color: #111111;
+  padding: 15rem 0;
+}
+
+.about__container {
+  display: grid;
+  grid-template-columns: var(--gap) repeat(2, [col-start] 1fr [col-end]) var(--gap);
+  grid-template: 5rem;
+  gap: 5rem;
+}
+
+.about__info {
+  grid-column: col-start 1/col-end 1;
+}
+
+.about__info span {
+  display: inline-block;
+  width: 15rem;
+  height: 7px;
+  background-image: linear-gradient(to right, #e30b0e, #fc5130);
+}
+
+.about__info h1 {
+  font-size: 6rem;
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+  letter-spacing: 2px;
+}
+
+.about__details {
+  margin-top: 3rem;
+  padding: 3rem;
+}
+
+.about__details div {
+  display: grid;
+  grid-template-columns: 5rem 1fr;
+  grid-template-rows: repeat(2, min-content);
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.about__details div i {
+  font-size: 5rem;
+  display: inline-block;
+  width: 5rem;
+  height: 5rem;
+  color: transparent;
+  background-image: linear-gradient(to right, #e30b0e, #fc5130);
+  -webkit-background-clip: text;
+  font-weight: bold;
+  grid-column: 1/2;
+  grid-row: 1/-1;
+}
+
+.about__details div h5 {
+  color: #fff;
+  font-size: 2.5rem;
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+
+.about__details div p {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+
+.about__img {
+  grid-column: col-start 2/col-end 2;
+}
+
+.about__img img {
+  width: 100%;
 }
 
 .institutional {
