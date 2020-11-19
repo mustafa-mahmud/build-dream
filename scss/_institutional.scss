@@ -1,5 +1,138 @@
 .institutional {
-  grid-column: full-start/full-end;
-  grid-row: row-start 2 / row-end 2;
-  background-color: yellow;
+	grid-column: full-start/full-end;
+	grid-row: row-start 2 / row-end 2;
+
+	background-color: #191919;
+	padding: 15rem 0;
+
+	&__container {
+		display: grid;
+		grid-template-columns: var(--gap) repeat(2, [col-start] 1fr [col-end]) var(--gap);
+		grid-template: 5rem;
+		gap: 5rem;
+	}
+
+
+	&__details {
+		margin-top: 3rem;
+		padding: 3rem;
+
+		div {
+			display: grid;
+			grid-template-columns: 5rem 1fr;
+			grid-template-rows: repeat(2, min-content);
+			gap: 2rem;
+
+			margin-bottom: 3rem;
+
+			i {
+				font-size: 5rem;
+				display: inline-block;
+				width: 5rem;
+				height: 5rem;
+				color: transparent;
+				background-image: linear-gradient(to right, $default-dark, $default-light);
+				-webkit-background-clip: text;
+				font-weight: bold;
+
+				grid-column: 1/2;
+				grid-row: 1/-1;
+			}
+
+			h5 {
+				color: #fff;
+				font-size: 2.5rem;
+
+				grid-column: 2/3;
+				grid-row: 1/2;
+			}
+
+			p {
+				grid-column: 2/3;
+				grid-row: 2/3;
+			}
+		}
+	}
+
+	&__img {
+		grid-column: col-start 1/col-end 1;
+
+		position: relative;
+
+		img {
+			width: 100%;
+		}
+
+		a {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			width: 10rem;
+			height: 10rem;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-image: linear-gradient(to right, $default-dark, $default-light);
+			cursor: pointer;
+			z-index: 99;
+
+			i {
+				font-size: 3rem;
+			}
+
+			&::after {
+				content: '';
+				position: absolute;
+				width: 150%;
+				height: 150%;
+				border-radius: 50%;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				background-image: linear-gradient(to right, $default-dark, $default-light);
+				display: inline-block;
+				z-index: -99;
+				opacity: 0;
+				animation: spread 1s ease-in-out infinite backwards;
+			}
+
+			@keyframes spread {
+				from {
+					width: 100%;
+					height: 100%;
+					opacity: 1;
+				}
+
+				to {
+					width: 150%;
+					height: 150%;
+					opacity: 0;
+				}
+			}
+		}
+	}
+
+	&__info {
+		grid-column: col-start 2/col-end 2;
+
+		span {
+			display: inline-block;
+			width: 15rem;
+			height: 7px;
+			background-image: linear-gradient(to right, $default-dark, $default-light);
+		}
+
+		h1 {
+			font-size: 6rem;
+			font-family: 'Montserrat',
+				sans-serif;
+			color: #fff;
+			letter-spacing: 2px;
+		}
+
+		p {}
+	}
+
 }
