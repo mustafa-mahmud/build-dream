@@ -5,9 +5,14 @@
 	background-color: #111111;
 	padding: 15rem 0;
 
+	display: grid;
+	grid-template-columns: var(--gap) 1fr var(--gap);
+
 	&__container {
+		grid-column: 2/2;
+
 		display: grid;
-		grid-template-columns: var(--gap) repeat(2, [col-start] 1fr [col-end]) var(--gap);
+		grid-template-columns: repeat(2, [col-start] 1fr [col-end]);
 		grid-template: 5rem;
 		gap: 5rem;
 	}

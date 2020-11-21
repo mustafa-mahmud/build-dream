@@ -23,6 +23,21 @@
 			color: #000000;
 		}
 	}
+}
 
+.title-box {
+	width: 60%;
+	text-align: center;
 
+	&--center {
+		margin: 0 auto;
+	}
+
+	.title {
+		font-size: 5rem;
+
+		&--white {
+			color: #fff;
+		}
+	}
 }

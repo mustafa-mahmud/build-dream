@@ -2,12 +2,17 @@
 	grid-column: full-start/full-end;
 	grid-row: row-start 2 / row-end 2;
 
+	display: grid;
+	grid-template-columns: var(--gap) 1fr var(--gap);
+
 	background-color: #191919;
 	padding: 15rem 0;
 
 	&__container {
+		grid-column: 2/2;
+
 		display: grid;
-		grid-template-columns: var(--gap) repeat(2, [col-start] 1fr [col-end]) var(--gap);
+		grid-template-columns: repeat(2, [col-start] 1fr [col-end]);
 		grid-template: 5rem;
 		gap: 5rem;
 	}
