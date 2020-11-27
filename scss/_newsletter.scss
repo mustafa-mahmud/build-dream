@@ -1,5 +1,54 @@
 .newsletter {
-  grid-column: full-start/full-end;
-  grid-row: row-start 5 / row-end 5;
-  background-color: coral;
+	grid-column: full-start/full-end;
+	grid-row: row-start 5 / row-end 5;
+
+	display: grid;
+	grid-template-columns: var(--gap) 1fr var(--gap);
+
+	padding: 10rem 0;
+	background-color: #000;
+
+	.title-box {
+		grid-column: 2/2;
+	}
+
+	&__container {
+		grid-column: 2/2;
+		margin-top: 5rem;
+	}
+
+	&__info {
+		form {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr) max-content;
+			gap: 2rem;
+
+			input {
+				border: 0;
+				outline: 0;
+				border: 1px solid #222222;
+				border-radius: 3px;
+				height: 5rem;
+				padding: 5px;
+				background-color: transparent;
+				caret-color: #fff;
+			}
+
+			button {
+				border: 0;
+				outline: 0;
+				color: #fff;
+				text-transform: uppercase;
+				letter-spacing: 1.5px;
+				background-image: linear-gradient(to right, $default-dark, $default-light);
+				padding: 1rem 3rem;
+				transition: all 0.3s linear;
+				cursor: pointer;
+
+				&:hover {
+					background-image: linear-gradient(to right, $default-light, $default-dark);
+				}
+			}
+		}
+	}
 }

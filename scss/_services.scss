@@ -7,6 +7,7 @@
 
 	background-color: #111111;
 	padding: 15rem 0;
+	position: relative;
 
 	&__container {
 		grid-column: 2/2;
@@ -34,12 +35,13 @@
 					color: transparent;
 					font-weight: bold;
 					line-height: 1;
+					font-size: 6rem;
 				}
 			}
 
 			h5 {
 				margin: 1.5rem;
-				font-size: 2.5rem;
+				font-size: 2.2rem;
 				font-family: 'Montserrat',
 					sans-serif;
 				font-weight: 900;
@@ -47,7 +49,9 @@
 				letter-spacing: 2px;
 			}
 
-			p {}
+			p {
+				color: #666666;
+			}
 
 			&:first-child {
 				position: relative;
@@ -86,7 +90,16 @@
 			}
 
 			&:hover {
-				background-color: #000;
+				background-image: linear-gradient(to right, $default-dark, $default-light);
+				transform: translateY(-1rem);
+			}
+
+			&:hover p {
+				color: #fff;
+			}
+
+			&:hover span i {
+				color: #fff;
 			}
 
 			&:hover::before,
