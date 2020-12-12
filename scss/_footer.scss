@@ -1,5 +1,136 @@
 .footer {
-  grid-column: full-start/full-end;
-  grid-row: row-start 7 / row-end 7;
-  background-color: crimson;
+	grid-column: full-start/full-end;
+	grid-row: row-start 6 / row-end 6;
+	background-color: #191919;
+
+	padding-top: 10rem;
+
+	display: grid;
+	grid-template-columns: [full-start] var(--gap) [center-start] 1fr [center-end] var(--gap) [full-end];
+
+	&__container {
+		grid-column: center-start/center-end;
+
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(25rem, 25rem));
+		gap: 5rem;
+	}
+
+	&__info {
+		h3 {
+			font-size: 2.5rem;
+			color: $color-white;
+			margin-bottom: 2rem;
+		}
+
+		p {
+			color: #555555;
+			line-height: 25px;
+		}
+
+		ul {
+			li {
+				margin-bottom: 1.2rem;
+				color: #555555;
+				font-size: 1.8rem;
+
+				a {
+					text-transform: capitalize;
+
+					i {
+						margin-right: 1rem;
+					}
+
+					&:hover {
+						color: $default-dark;
+					}
+				}
+
+			}
+		}
+	}
+
+	&__logo {
+		background-image: linear-gradient(to right, $default-dark, $default-light);
+		background-clip: text;
+		-webkit-background-clip: text;
+		color: transparent !important;
+	}
+
+	&__social {
+		display: flex;
+		justify-content: space-between;
+
+		i {
+			margin-top: 3rem;
+			font-size: 3.5rem;
+			background-image: linear-gradient(to right, $default-dark, $default-light);
+			background-clip: text;
+			-webkit-background-clip: text;
+			color: transparent;
+		}
+	}
+
+	&__btn {
+		padding: 2px;
+		background-image: linear-gradient(to right, $default-dark, $default-light);
+		border: 0;
+		margin-top: 2rem;
+		cursor: pointer;
+
+		a {
+			background-color: #000;
+			display: flex;
+			padding: 1.3rem;
+
+			i {
+				margin-right: 1rem;
+				font-size: 1.8rem;
+				color: #ffffff;
+			}
+
+			span {
+				font-size: 1.8rem;
+				color: #ffffff;
+			}
+		}
+
+		&:hover a {
+			background-image: linear-gradient(to right, $default-dark, $default-light);
+		}
+	}
+
+	&__tags {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1.5rem;
+
+		a {
+			display: inline-block;
+			border-radius: 3px;
+			border: 1px solid #555555;
+			padding: 1rem;
+			text-transform: capitalize;
+			text-align: center;
+			color: #555555;
+
+			&:hover {
+				color: #ffffff;
+			}
+		}
+	}
+
+	&__copyright {
+		grid-column: full-start/full-end;
+		padding: 2rem 10rem;
+		margin-top: 10rem;
+		background-color: #000000;
+
+		display: grid;
+		grid-auto-flow: column;
+		justify-content: space-between;
+		color: #555555;
+		font-size: 1.4rem;
+	}
+
 }

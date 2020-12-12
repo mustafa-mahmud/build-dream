@@ -996,14 +996,129 @@ ul {
   background-image: linear-gradient(to right, #f58772, #e30b0e);
 }
 
-.talks {
-  grid-column: full-start/full-end;
-  grid-row: row-start 6 / row-end 6;
-  background-color: burlywood;
-}
-
 .footer {
   grid-column: full-start/full-end;
-  grid-row: row-start 7 / row-end 7;
-  background-color: crimson;
+  grid-row: row-start 6 / row-end 6;
+  background-color: #191919;
+  padding-top: 10rem;
+  display: grid;
+  grid-template-columns: [full-start] var(--gap) [center-start] 1fr [center-end] var(--gap) [full-end];
+}
+
+.footer__container {
+  grid-column: center-start/center-end;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 25rem));
+  gap: 5rem;
+}
+
+.footer__info h3 {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+.footer__info p {
+  color: #555555;
+  line-height: 25px;
+}
+
+.footer__info ul li {
+  margin-bottom: 1.2rem;
+  color: #555555;
+  font-size: 1.8rem;
+}
+
+.footer__info ul li a {
+  text-transform: capitalize;
+}
+
+.footer__info ul li a i {
+  margin-right: 1rem;
+}
+
+.footer__info ul li a:hover {
+  color: #e30b0e;
+}
+
+.footer__logo {
+  background-image: linear-gradient(to right, #e30b0e, #f58772);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent !important;
+}
+
+.footer__social {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__social i {
+  margin-top: 3rem;
+  font-size: 3.5rem;
+  background-image: linear-gradient(to right, #e30b0e, #f58772);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.footer__btn {
+  padding: 2px;
+  background-image: linear-gradient(to right, #e30b0e, #f58772);
+  border: 0;
+  margin-top: 2rem;
+  cursor: pointer;
+}
+
+.footer__btn a {
+  background-color: #000;
+  display: flex;
+  padding: 1.3rem;
+}
+
+.footer__btn a i {
+  margin-right: 1rem;
+  font-size: 1.8rem;
+  color: #ffffff;
+}
+
+.footer__btn a span {
+  font-size: 1.8rem;
+  color: #ffffff;
+}
+
+.footer__btn:hover a {
+  background-image: linear-gradient(to right, #e30b0e, #f58772);
+}
+
+.footer__tags {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.footer__tags a {
+  display: inline-block;
+  border-radius: 3px;
+  border: 1px solid #555555;
+  padding: 1rem;
+  text-transform: capitalize;
+  text-align: center;
+  color: #555555;
+}
+
+.footer__tags a:hover {
+  color: #ffffff;
+}
+
+.footer__copyright {
+  grid-column: full-start/full-end;
+  padding: 2rem 10rem;
+  margin-top: 10rem;
+  background-color: #000000;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+  color: #555555;
+  font-size: 1.4rem;
 }
