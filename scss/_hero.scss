@@ -1,11 +1,12 @@
 .hero {
-	background-color: #040402;
-
 	grid-column: full-start/full-end;
 	grid-row: hero-start/hero-end;
 
 	display: grid;
 	grid-template-columns: [full-start] var(--gap) [center-start] 1fr [center-end] var(--gap) [full-end];
+
+	background-color: #040402;
+	padding: 7rem 0;
 
 	&__container {
 		grid-column: center-start/center-end;
@@ -42,6 +43,10 @@
 				display: inline-block;
 				position: relative;
 				z-index: 9;
+
+				@media (max-width: $bp-1300) {
+					font-size: 6rem;
+				}
 			}
 		}
 

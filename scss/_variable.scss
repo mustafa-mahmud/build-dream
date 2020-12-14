@@ -10,3 +10,8 @@ $font-normal:'Poppins',
 sans-serif;
 $font-bold:'Montserrat',
 sans-serif;
+
+/* Media */
+$bp-1300:81.25em;
+
+@media (max-width:$bp-1300) {}
