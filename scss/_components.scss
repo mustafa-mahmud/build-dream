@@ -1,27 +1,17 @@
-.btn-transparent {
-	text-transform: capitalize;
-	padding: 3px;
-	border: 0;
-	font-size: 1.8rem;
-	position: relative;
-	z-index: 9 !important;
-	background-color: #040402;
+.btn {
+	display: inline-block;
 	background-image: linear-gradient(to right, $default-dark, $default-light);
-	position: relative;
-	z-index: -1;
+	padding: 2.5px;
 
 	span {
-		background: #040402;
-		color: #fff;
+		padding: 0.8rem 2rem;
+		background-color: #000000;
 		display: inline-block;
-		padding: 1rem 1.5rem;
-		cursor: pointer;
-		transition: all 0.3s linear;
-
-		&:hover {
-			background: linear-gradient(to right, $default-dark, $default-light);
-			color: #000000;
-		}
+		position: relative;
+		text-transform: uppercase;
+		font-size: 1.3rem;
+		color: #fff;
+		letter-spacing: 2px;
 	}
 }
 

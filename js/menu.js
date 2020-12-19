@@ -1,21 +1,24 @@
-const megaMenuDrop = document.querySelector('.mega-drop-down');
-const megaMenu = document.querySelector('.mega-menu');
+const megaMenuDropdown = document.querySelector('.mega-menu-dropdown');
+const headerMega = document.querySelector('.header__mega');
 
-//add class to mega menu
-function show() {
-  megaMenu.style.setProperty('transform', 'translateY(0)', 'important');
-  megaMenu.style.setProperty('opacity', 1, 'important');
-  megaMenu.style.setProperty('visibility', 'visible', 'important');
+function showHide(opacity, translate, visibility) {
+  headerMega.style.setProperty('opacity', opacity, 'important');
+  headerMega.style.setProperty('transform', translate, 'important');
+  headerMega.style.setProperty('visibility', visibility, 'important');
 }
 
-//remove class from mega menu
-function hide() {
-  megaMenu.style.setProperty('transform', 'translateY(3rem)', 'important');
-  megaMenu.style.setProperty('opacity', 0, 'important');
-  megaMenu.style.setProperty('visibility', 'hiddent', 'important');
-}
+megaMenuDropdown.addEventListener('mouseenter', () => {
+  showHide(1, 'translateY(-0px)', 'visible');
+});
 
-megaMenuDrop.addEventListener('mouseenter', show);
-megaMenu.addEventListener('mouseenter', show);
-megaMenu.addEventListener('mouseleave', hide);
-megaMenuDrop.addEventListener('mouseleave', hide);
+megaMenuDropdown.addEventListener('mouseleave', () => {
+  showHide(0, 'translateY(5rem)', 'hidden');
+});
+
+headerMega.addEventListener('mouseenter', () => {
+  showHide(1, 'translateY(-0px)', 'visible');
+});
+
+headerMega.addEventListener('mouseleave', () => {
+  showHide(0, 'translateY(5rem)', 'hidden');
+});
