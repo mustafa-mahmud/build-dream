@@ -12,6 +12,12 @@
 		font-size: 1.3rem;
 		color: #fff;
 		letter-spacing: 2px;
+
+		transition: all 0.3s linear;
+
+		&:hover {
+			background-color: $default-dark !important;
+		}
 	}
 }
 
