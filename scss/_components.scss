@@ -2,6 +2,8 @@
 	display: inline-block;
 	background-image: linear-gradient(to right, $default-dark, $default-light);
 	padding: 2.5px;
+	position: relative;
+	z-index: 2;
 
 	span {
 		padding: 0.8rem 2rem;

@@ -91,6 +91,11 @@
 		grid-template-columns: 1.5fr 1fr 1fr 1fr;
 		flex-wrap: wrap;
 
+		@media (max-width:$bp-1150) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+
 		transform: translateY(5rem);
 		opacity: 0;
 		visibility: hidden;

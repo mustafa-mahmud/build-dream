@@ -21,6 +21,11 @@
 
 		margin-top: 5rem;
 
+		@media (max-width:$bp-1150) {
+			justify-content: center;
+		}
+
+
 		div {
 			background-color: #222222;
 			padding: 3rem;

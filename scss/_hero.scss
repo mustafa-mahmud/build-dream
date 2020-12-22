@@ -80,6 +80,11 @@
 			transform: rotate(-30deg);
 			left: 15%;
 			z-index: 1;
+
+			@media (max-width:$bp-1150) {
+				display: none;
+			}
+
 		}
 	}
 
